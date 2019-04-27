@@ -12,6 +12,11 @@
   $ sudo apt-get update
   $ sudo apt-get udgrade
   ```
+  also you can have automatic updates by running these commands
+  ```bash
+  $ sudo apt-get install unattended-upgrades
+  $ sudo dpkg-reconfigure unattended-upgradese
+  ```
   4- Change the SSH port From 22 to 2200 by Changing the port in sshd_config File from 22 to 2200, and also Configure lightsail to allow it.
   ```bash
   $ sudo nano /etc/ssh/sshd_config
