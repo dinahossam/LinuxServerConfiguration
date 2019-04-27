@@ -79,7 +79,7 @@
   ```bash
   $ sudo apt-get install git
   ```
-  16- Download the ItemCatalog in the path /var/www/ItemCatalog/ using git.</br>
+  16- Git clone https://github.com/dinahossam/ItemCatalog.git in the path /var/www/ItemCatalog/ using git.</br>
   17- Create wsgi.py file in the path /var/www/ItemCatalog.
   ```bash
   $ sudo nano /var/www/ItemCatalog/wsgi.py
