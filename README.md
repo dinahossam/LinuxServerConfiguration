@@ -34,15 +34,18 @@
   ```bash
   $ sudo nano /etc/sudoers.d/grader
   ```
-  then add this line "grader ALL=(ALL:ALL) ALL".
-  8- Create an SSH key pair for grader using the ssh-keygen tool.
-    a- in your local machine, Use SSH-Kegyen to create Private key, 2 files will be created "grader.pub" and "grader".
+  then add this line
+  ```
+  "grader ALL=(ALL:ALL) ALL"
+  ```
+  8- Create an SSH key pair for grader using the ssh-keygen tool. </br>
+    a- in your local machine, Use SSH-Kegyen to create Private key, 2 files will be created "grader.pub" and "grader".</br>
     b- in the Server Using User Grader.
      ```bash
      $ sudo mkdir .ssh
      $ sudo nano authorized_keys
      ```
-     then copy the content of "grader.pub" into authorized_keys.
+     Then copy the content of "grader.pub" into authorized_keys.</br>
   9- Change the Persmissions of .ssh dir and authorized_keys.
   ```bash
   $sudo chmod 700 .ssh
@@ -62,7 +65,7 @@
   ```bash
   $ sudo apt-get install postgresql
   ```
-  13- Do not allow remote connections, make sure that this File '/etc/postgresql/9.5/main/pg_hba.conf' doesn't allow remote connections.
+  13- Do not allow remote connections, make sure that this File '/etc/postgresql/9.5/main/pg_hba.conf' doesn't allow remote connections.</br>
   14- Create a new database user named catalog that has limited permissions to your catalog application database.
   ```bash
   $ sudo su - postgres
@@ -76,7 +79,7 @@
   ```bash
   $ sudo apt-get install git
   ```
-  16- Download the ItemCatalog in the path /var/www/ItemCatalog/ using git.
+  16- Download the ItemCatalog in the path /var/www/ItemCatalog/ using git.</br>
   17- Create wsgi.py file in the path /var/www/ItemCatalog.
   ```bash
   $ sudo nano /var/www/ItemCatalog/wsgi.py
@@ -113,7 +116,7 @@
   20- Now Visit the URL http://13.233.236.126.xip.io and it will work.
   
 # Reference
-  1- https://lightsail.aws.amazon.com
+  1- https://lightsail.aws.amazon.com </br>
   2- http://xip.io/
 
 
