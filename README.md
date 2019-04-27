@@ -40,12 +40,12 @@
   ```
   8- Create an SSH key pair for grader using the ssh-keygen tool. </br>
     a- in your local machine, Use SSH-Kegyen to create Private key, 2 files will be created "grader.pub" and "grader".</br>
-    b- in the Server Using User Grader.
-     ```bash
-     $ sudo mkdir .ssh
-     $ sudo nano authorized_keys
-     ```
-     Then copy the content of "grader.pub" into authorized_keys.</br>
+    b- in the Server Using grader as user. </br>
+  ```bash
+  $ sudo mkdir .ssh
+  $ sudo nano authorized_keys
+  ```
+  Then copy the content of "grader.pub" into authorized_keys.</br>
   9- Change the Persmissions of .ssh dir and authorized_keys.
   ```bash
   $sudo chmod 700 .ssh
@@ -85,6 +85,7 @@
   $ sudo nano /var/www/ItemCatalog/wsgi.py
   ```
   and add these Lines.
+  ```
   import sys
   sys.path.insert(0, '/var/www/ItemCatalog/')
   from ItemCatalog import app as application
@@ -92,6 +93,7 @@
     'postgresql://'
     'catalog:password@localhost/catalog')
   application.secret_key = 'super_secret_key'
+  ```
   18- update apache2 sites-available to add ItemCatalog site.
   ```bash
   $ sudo nano /etc/apache2/sites-available/ItemCatalog.conf
